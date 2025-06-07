@@ -25,3 +25,31 @@ export interface MockTestResponse {
     test_data: TestData;
 }
 
+export interface RandomDataResponse {
+    id: string;
+    message: string;
+    timestamp: string;
+    version: string;
+    created_at: string;
+    rig_name: string;
+    temp_rig: number;
+    end_ring_service: string;
+    token_rig: string;
+    rig_status: 'active' | 'inactive' | 'maintenance' | 'error';
+    rig_location: string;
+    rig_type: string;
+    rig_model: string;
+    rig_serial_number: string;
+    rig_ip_address: string;
+    rig_port: number;
+    rig_username: string;
+  }
+
+
+  export interface RigListResponse {
+    data: RandomDataResponse[];
+    total: number;
+    page: number;
+    per_page: number;
+    timestamp: string;
+  }

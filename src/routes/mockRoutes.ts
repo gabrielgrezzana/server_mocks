@@ -10,7 +10,13 @@ router.get('/', mockController.getDefault);
 router.get('/test', mockController.getTest);
 router.get('/teste/df', mockController.getDefault);
 
+router.get('/randomRigsData', mockController.getrandomData);
 
+// GET /server/mock/rigs?count=100
+router.get('/rigs', mockController.getRigs);
+
+// GET /server/mock/rig (single random rig)
+router.get('/rig', mockController.getRandomRig);
 
 
 export default router;
