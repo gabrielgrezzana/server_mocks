@@ -1,16 +1,25 @@
 {
-  "name": "server_mocks",
-  "version": "1.0.0",
-  "description": "just server test with mocks",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "gabriel_grezzana",
-  "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "crypto": "^1.0.1",
-    "express": "^5.1.0"
-  }
+    "name": "server_mocks",
+    "version": "1.0.0",
+    "description": "just server test with mocks",
+    "main": "server.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node dist/server.js",
+        "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+        "dev:watch": "nodemon --exec ts-node src/server.ts"
+    },
+    "author": "gabriel_grezzana",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "crypto": "^1.0.1",
+        "express": "^5.1.0"
+    },
+    "devDependencies": {
+        "@types/cors": "^2.8.19",
+        "@types/express": "^5.0.3",
+        "nodemon": "^3.1.10",
+        "ts-node-dev": "^2.0.0"
+    }
 }
