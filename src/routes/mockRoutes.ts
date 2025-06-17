@@ -1,5 +1,6 @@
-import { Router } from "express";
-import mockController from "../controller/mockController";
+import { Router } from 'express';
+import mockController from '../controller/mockController';
+import mockControllerLogin from '../controller/mockControllerLogin';
 
 const router: Router = Router();
 
@@ -18,5 +19,7 @@ router.get('/rigs', mockController.getRigs);
 // GET /server/mock/rig (single random rig)
 router.get('/rig', mockController.getRandomRig);
 
+//POST /login
+router.post('/login', mockControllerLogin.postLogin);
 
 export default router;
